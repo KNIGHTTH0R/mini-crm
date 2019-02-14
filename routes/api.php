@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 
 Route::post('login', 'Api\UserController@login');
 
-Route::group(['middleware' => ['json', 'auth:api']], function () {
+Route::group(['middleware' => ['json', 'auth:api', 'is-admin']], function () {
     Route::post('details', 'Api\UserController@details');
 
     Route::resource('company',  'Api\CompanyController' )->except(['update']);
