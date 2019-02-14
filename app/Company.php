@@ -2,8 +2,10 @@
 
 namespace App;
 
+use App\Mail\NewCompany;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class Company extends Model
@@ -22,6 +24,11 @@ class Company extends Model
               $path        = Storage::put('public/logos', $model->logo);
               $model->logo = Storage::url($path);
            }
+        });
+
+        self::created(function($model){
+           // При заполнении базы сидами, будет спам, поэтому перене в контроллер
+            // Mail::to(auth()->user()->email)->send(new NewCompany());
         });
 
         self::updating(function($model){

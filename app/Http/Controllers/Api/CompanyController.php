@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Company;
 use App\Http\Resources\CompanyResource;
+use App\Mail\NewCompany;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Storage;
-use Faker\Factory as Faker;
+use Illuminate\Support\Facades\Mail;
 
 class CompanyController extends Controller
 {
@@ -18,7 +18,7 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $records = Company::paginate(5);
+        $records = Company::paginate(10);
         return CompanyResource::collection($records);
     }
 
@@ -38,6 +38,8 @@ class CompanyController extends Controller
         ]);
 
         $company = Company::create($validatedData);
+
+        Mail::to(auth()->user()->email)->send(new NewCompany());
 
         return new CompanyResource($company);
     }
