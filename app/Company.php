@@ -26,11 +26,6 @@ class Company extends Model
            }
         });
 
-        self::created(function($model){
-           // При заполнении базы сидами, будет спам, поэтому перене в контроллер
-            // Mail::to(auth()->user()->email)->send(new NewCompany());
-        });
-
         self::updating(function($model){
             if($model->logo instanceof UploadedFile)
             {

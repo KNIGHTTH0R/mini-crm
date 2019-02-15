@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Api;
 
 use App\Company;
 use App\Http\Resources\CompanyResource;
+use App\Jobs\SendNewCompanyEmail;
 use App\Mail\NewCompany;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class CompanyController extends Controller
@@ -39,7 +41,7 @@ class CompanyController extends Controller
 
         $company = Company::create($validatedData);
 
-        Mail::to(auth()->user()->email)->send(new NewCompany());
+        dispatch(new SendNewCompanyEmail(auth()->user()));
 
         return new CompanyResource($company);
     }
