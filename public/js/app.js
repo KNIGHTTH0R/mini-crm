@@ -1912,7 +1912,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       isLoaded: false,
-      company: null
+      company: null,
+      errors: false
     };
   },
   beforeRouteEnter: function beforeRouteEnter(to, from, next) {
@@ -1955,8 +1956,10 @@ __webpack_require__.r(__webpack_exports__);
           'Authorization': this.$store.state.token
         }
       }).then(function (response) {
+        self.errors = false;
         self.company = response.data.data;
       }).catch(function (error) {
+        self.errors = true;
         console.log(error);
       });
     }
@@ -2015,6 +2018,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "CreateCompany.vue",
   data: function data() {
@@ -2024,7 +2028,8 @@ __webpack_require__.r(__webpack_exports__);
         email: null,
         website: null,
         logo: null
-      }
+      },
+      errors: false
     };
   },
   mounted: function mounted() {
@@ -2044,9 +2049,10 @@ __webpack_require__.r(__webpack_exports__);
           'Authorization': this.$store.state.token
         }
       }).then(function (response) {
-        console.log(response.data.data.id);
+        self.errors = false;
         self.$router.push('/company/' + response.data.data.id);
       }).catch(function (error) {
+        self.errors = true;
         console.log(error);
       });
     }
@@ -2111,6 +2117,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "CreateEmployer.vue",
   data: function data() {
@@ -2121,7 +2131,8 @@ __webpack_require__.r(__webpack_exports__);
         email: null,
         phone: null,
         employer_id: null
-      }
+      },
+      errors: false
     };
   },
   mounted: function mounted() {
@@ -2141,9 +2152,10 @@ __webpack_require__.r(__webpack_exports__);
           'Authorization': this.$store.state.token
         }
       }).then(function (response) {
-        console.log(response.data.id);
+        self.errors = false;
         self.$router.push('/employer/' + response.data.id);
       }).catch(function (error) {
+        self.errors = true;
         console.log(error);
       });
     }
@@ -59269,6 +59281,7 @@ var render = function() {
                       }
                     ],
                     staticClass: "validate",
+                    class: { invalid: _vm.errors },
                     attrs: {
                       placeholder: "Placeholder",
                       id: "first_name",
@@ -59301,6 +59314,7 @@ var render = function() {
                       }
                     ],
                     staticClass: "validate",
+                    class: { invalid: _vm.errors },
                     attrs: { id: "email", type: "email" },
                     domProps: { value: _vm.company.email },
                     on: {
@@ -59329,6 +59343,7 @@ var render = function() {
                       }
                     ],
                     staticClass: "validate",
+                    class: { invalid: _vm.errors },
                     attrs: { id: "website", type: "text" },
                     domProps: { value: _vm.company.website },
                     on: {
@@ -59490,6 +59505,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "validate",
+                class: { invalid: _vm.errors },
                 attrs: { id: "website", type: "text" },
                 domProps: { value: _vm.company.website },
                 on: {
@@ -59589,6 +59605,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "validate",
+                class: { invalid: _vm.errors },
                 attrs: {
                   placeholder: "Placeholder",
                   id: "first_name",
@@ -59622,6 +59639,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "validate",
+                class: { invalid: _vm.errors },
                 attrs: {
                   placeholder: "Placeholder",
                   id: "last_name",
@@ -59655,6 +59673,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "validate",
+                class: { invalid: _vm.errors },
                 attrs: { id: "email", type: "email" },
                 domProps: { value: _vm.employer.email },
                 on: {
@@ -59681,6 +59700,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "validate",
+                class: { invalid: _vm.errors },
                 attrs: { id: "phone", type: "text" },
                 domProps: { value: _vm.employer.phone },
                 on: {
@@ -59709,6 +59729,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "validate",
+                class: { invalid: _vm.errors },
                 attrs: { id: "employer_id", type: "text" },
                 domProps: { value: _vm.employer.employer_id },
                 on: {

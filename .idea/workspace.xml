@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="cbaaf3b5-b7dd-46aa-a18f-7363b874ee81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CompaniesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CompaniesTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/EmployeesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/EmployeesTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/RemoveCompany.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/RemoveCompany.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/CompanyDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/CompanyDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/CreateCompany.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/CreateCompany.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/CreateEmployer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/CreateEmployer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,21 +61,21 @@
           <entry key="PHP Console" value="112" />
           <entry key="env" value="31" />
           <entry key="js" value="1587" />
-          <entry key="php" value="3180" />
+          <entry key="php" value="3183" />
           <entry key="scss" value="174" />
           <entry key="txt" value="12" />
-          <entry key="vue" value="2907" />
+          <entry key="vue" value="3052" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="420" />
+          <entry key="Blade" value="421" />
           <entry key="HTML" value="2" />
           <entry key="JavaScript" value="1587" />
-          <entry key="PHP" value="2872" />
+          <entry key="PHP" value="2874" />
           <entry key="PLAIN_TEXT" value="43" />
           <entry key="SCSS" value="174" />
-          <entry key="Vue.js" value="2905" />
+          <entry key="Vue.js" value="3050" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -81,10 +83,10 @@
           <entry key="companies" value="5" />
           <entry key="css" value="1" />
           <entry key="employees" value="3" />
-          <entry key="env" value="4" />
+          <entry key="env" value="5" />
           <entry key="jobs" value="1" />
           <entry key="jpg" value="7" />
-          <entry key="js" value="11" />
+          <entry key="js" value="12" />
           <entry key="json" value="7" />
           <entry key="oauth_access_tokens" value="1" />
           <entry key="oauth_auth_codes" value="1" />
@@ -92,28 +94,28 @@
           <entry key="oauth_personal_access_clients" value="1" />
           <entry key="oauth_refresh_tokens" value="1" />
           <entry key="password_resets" value="1" />
-          <entry key="php" value="93" />
+          <entry key="php" value="94" />
           <entry key="role_user" value="1" />
           <entry key="roles" value="1" />
           <entry key="scss" value="2" />
           <entry key="sql" value="1" />
           <entry key="users" value="6" />
-          <entry key="vue" value="27" />
+          <entry key="vue" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="3" />
+          <entry key="Blade" value="4" />
           <entry key="CSS" value="1" />
           <entry key="Database Element" value="24" />
           <entry key="Image" value="7" />
           <entry key="JSON" value="7" />
-          <entry key="JavaScript" value="11" />
+          <entry key="JavaScript" value="12" />
           <entry key="PHP" value="90" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="PLAIN_TEXT" value="5" />
           <entry key="SCSS" value="2" />
           <entry key="Scratch" value="1" />
-          <entry key="Vue.js" value="27" />
+          <entry key="Vue.js" value="31" />
         </counts>
       </usages-collector>
     </session>
@@ -121,82 +123,64 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/lang/en/pagination.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/lang/en/passwords.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/lang/ru/auth.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/UserTableSeeder.php">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/CreateEmployer.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#7#20#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/RoleTableSeeder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#7#20#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://cf881b34-e6b6-45f5-9f95-8f012f2364bd/schema/crm_database/table/companies">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+            <state relative-caret-position="236">
+              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/js/components/RemoveCompany.vue">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/CompanyDetail.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+            <state relative-caret-position="135">
+              <caret line="9" column="102" selection-start-line="9" selection-start-column="102" selection-end-line="9" selection-end-column="102" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/EmployeesTableSeeder.php">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/CreateCompany.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            <state relative-caret-position="154">
+              <caret line="20" column="71" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/CompaniesTableSeeder.php">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/Login.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-              <folding>
-                <element signature="e#7#38#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/bootstrap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="97" selection-start-line="11" selection-start-column="97" selection-end-line="11" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="72" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -260,20 +244,20 @@
         <option value="$PROJECT_DIR$/resources/js/config/dev.env.js" />
         <option value="$PROJECT_DIR$/resources/js/config/prod.env.js" />
         <option value="$PROJECT_DIR$/resources/js/bootstrap.js" />
-        <option value="$PROJECT_DIR$/resources/js/components/CreateEmployer.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/EmployerDetail.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/Companies.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/CompanyDetail.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/CreateCompany.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/Employees.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/RemoveEmployer.vue" />
         <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/resources/js/components/MainPage.vue" />
-        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/router/index.js" />
+        <option value="$PROJECT_DIR$/resources/js/components/RemoveCompany.vue" />
         <option value="$PROJECT_DIR$/database/seeds/EmployeesTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/CompaniesTableSeeder.php" />
-        <option value="$PROJECT_DIR$/resources/js/components/RemoveCompany.vue" />
+        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/CreateCompany.vue" />
+        <option value="$PROJECT_DIR$/resources/js/components/CreateEmployer.vue" />
+        <option value="$PROJECT_DIR$/resources/js/components/CompanyDetail.vue" />
       </list>
     </option>
   </component>
@@ -435,6 +419,12 @@
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="crm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -542,18 +532,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550153079993</updated>
-      <workItem from="1550153081093" duration="62176000" />
+      <workItem from="1550153081093" duration="62823000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62176000" />
+    <option name="totallyTimeSpent" value="62823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1012" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="npm" sideWeight="0.5016949" side_tool="true" visible="true" weight="0.21458998" />
+      <window_info id="npm" sideWeight="0.5016949" side_tool="true" weight="0.21458998" />
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49830508" visible="true" weight="0.21458998" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -801,13 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/CompanyDetail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="97" column="27" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/Employees.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
@@ -818,31 +801,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/CreateCompany.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-746">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/CreateEmployer.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/EmployerDetail.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1376">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/Login.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="60" column="33" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -853,31 +815,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="97" selection-start-line="11" selection-start-column="97" selection-end-line="11" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/MainPage.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="97" selection-start-line="6" selection-start-column="97" selection-end-line="6" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -927,28 +868,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/EmployeesTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/UserTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="e#7#20#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/CompaniesTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="e#7#38#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -964,6 +888,72 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/EmployeesTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/CompaniesTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding>
+            <element signature="e#7#38#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/Login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="97" selection-start-line="11" selection-start-column="97" selection-end-line="11" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="72" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/CreateEmployer.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/CreateCompany.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="20" column="71" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/CompanyDetail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="102" selection-start-line="9" selection-start-column="102" selection-end-line="9" selection-end-column="102" />
         </state>
       </provider>
     </entry>

@@ -18,7 +18,8 @@
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="website" type="text" v-model="company.website" class="validate">
+                        <input id="website" :class="{'invalid':errors}" type="text" v-model="company.website"
+                               class="validate">
                         <label for="website">Website</label>
                     </div>
                 </div>
@@ -49,27 +50,28 @@
                     email: null,
                     website: null,
                     logo: null,
-                }
+                },
+                errors: false
             }
         },
 
-        mounted: function(){
+        mounted: function () {
             M.updateTextFields();
         },
 
         methods: {
-            onSubmit: function() {
+            onSubmit: function () {
                 self = this;
                 let formData = new FormData();
-                if(this.company.name)
+                if (this.company.name)
                     formData.append('name', this.company.name);
 
-                if(this.company.email)
+                if (this.company.email)
                     formData.append('email', this.company.email);
 
-                if(this.company.website)
+                if (this.company.website)
                     formData.append('website', this.company.website);
-                if(this.$refs.logo.files[0])
+                if (this.$refs.logo.files[0])
                     formData.append('logo', this.$refs.logo.files[0]);
 
                 axios
@@ -80,10 +82,11 @@
                         }
                     })
                     .then(function (response) {
-                        console.log(response.data.data.id)
-                       self.$router.push('/company/'+response.data.data.id);
+                        self.errors = false
+                        self.$router.push('/company/' + response.data.data.id);
 
                     }).catch(function (error) {
+                    self.errors = true
                     console.log(error)
                 });
             },

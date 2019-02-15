@@ -7,19 +7,19 @@
                 <img class="responsive-img" width="100px" :src="company.logo">
                 <div class="row">
                     <div class="input-field col s6">
-                        <input placeholder="Placeholder" id="first_name" v-model="company.name" type="text"
+                        <input placeholder="Placeholder" id="first_name"  :class="{'invalid':errors}" v-model="company.name" type="text"
                                class="validate">
                         <label for="first_name">Name</label>
                     </div>
                     <div class="input-field col s6">
-                        <input id="email" type="email" v-model="company.email" class="validate">
+                        <input id="email" :class="{'invalid':errors}" type="email" v-model="company.email" class="validate">
                         <label for="email">Email</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="website" type="text" v-model="company.website" class="validate">
+                        <input id="website" :class="{'invalid':errors}" type="text" v-model="company.website" class="validate">
                         <label for="website">Website</label>
                     </div>
                 </div>
@@ -46,7 +46,8 @@
         data: function () {
             return {
                 isLoaded: false,
-                company: null
+                company: null,
+                errors: false
             }
         },
 
@@ -79,31 +80,33 @@
                     M.updateTextFields();
                 });
             },
-            onSubmit: function() {
+            onSubmit: function () {
                 self = this;
                 let formData = new FormData();
-                if(this.company.name)
+                if (this.company.name)
                     formData.append('name', this.company.name);
 
-                if(this.company.email)
+                if (this.company.email)
                     formData.append('email', this.company.email);
 
-                if(this.company.website)
+                if (this.company.website)
                     formData.append('website', this.company.website);
 
-                if(this.$refs.logo.files[0])
+                if (this.$refs.logo.files[0])
                     formData.append('logo', this.$refs.logo.files[0]);
 
                 axios
-                    .post('company/'+ this.$route.params.id +'/update', formData, {
+                    .post('company/' + this.$route.params.id + '/update', formData, {
                         headers: {
                             'Content-Type': 'multipart/form-data',
                             'Authorization': this.$store.state.token
                         }
                     })
                     .then(function (response) {
+                        self.errors = false;
                         self.company = response.data.data
                     }).catch(function (error) {
+                    self.errors = true;
                     console.log(error)
                 });
             },
