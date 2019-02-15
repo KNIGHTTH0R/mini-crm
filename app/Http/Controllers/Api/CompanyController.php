@@ -5,11 +5,9 @@ namespace App\Http\Controllers\Api;
 use App\Company;
 use App\Http\Resources\CompanyResource;
 use App\Jobs\SendNewCompanyEmail;
-use App\Mail\NewCompany;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Mail;
+
 
 class CompanyController extends Controller
 {
@@ -17,11 +15,12 @@ class CompanyController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     * @throws \Exception
      */
     public function index()
     {
-        $records = Company::paginate(10);
-        return CompanyResource::collection($records);
+        $records = Company::query();
+        return datatables()->of($records)->toJson();
     }
 
     /**

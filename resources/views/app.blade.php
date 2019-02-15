@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="api-base-url" content="{{config('app.url').'/api/' }}" />
 
     <title>Mini CRM</title>
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
@@ -17,6 +18,12 @@
         <div class="nav-wrapper">
             <router-link tag="a" class="brand-logo" to="/">MiniCRM</router-link>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li v-if="$store.state.token">
+                    <router-link  to="/">Companies</router-link>
+                </li>
+                <li v-if="$store.state.token">
+                    <router-link  to="/employees">Employees</router-link>
+                </li>
                 <li>
                     <router-link v-if="!$store.state.token" to="/login">Login</router-link>
                 </li>
@@ -26,8 +33,9 @@
             </ul>
         </div>
     </nav>
-
-    <router-view></router-view>
+    <div class="container">
+        <router-view></router-view>
+    </div>
 </div>
 <footer class="page-footer">
     <div class="footer-copyright">

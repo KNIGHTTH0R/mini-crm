@@ -18,7 +18,7 @@ class CompanyResource extends JsonResource
             'id'         => $this->id,
             'name'       => $this->name,
             'email'      => $this->email,
-            'logo'       => asset($this->logo),
+            'logo'       => $this->logo ? asset($this->logo) : null,
             'website'    => $this->website
         ];
     }

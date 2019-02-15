@@ -13,3 +13,24 @@ body {
   padding: 32px 48px 0px 48px;
   border: 1px solid #EEE;
 }
+
+.dataTables_paginate.paging_simple_numbers {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  .paginate_button {
+    cursor: pointer;
+    padding: 20px;
+    background-color: #d6d5d5;
+    transition: background-color ease 0.3s;
+    margin-left: 15px;
+    border: 1px solid #a5a5a5;
+
+    &:hover {
+      background-color: #bdbbbb;
+    }
+  }
+
+}

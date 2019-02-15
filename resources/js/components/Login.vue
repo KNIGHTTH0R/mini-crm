@@ -63,7 +63,9 @@
         methods: {
             authorize: function () {
                 self = this;
-                this.$store.dispatch('authenticate', {email: this.email, password: this.password})
+                this.$store.dispatch('authenticate', {email: this.email, password: this.password}).then(function (response) {
+                    // console.log(response);
+                })
                     .catch(function (error) {
                         console.log(error.response)
                         self.errors = true;

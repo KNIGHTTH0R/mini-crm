@@ -12,11 +12,12 @@ class EmployeeController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
     public function index()
     {
-        $records = Employee::paginate(10);
-        return response()->json($records, 200);
+        $records = Employee::query();
+        return datatables()->of($records)->toJson();
     }
 
     /**

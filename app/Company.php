@@ -42,13 +42,14 @@ class Company extends Model
 
         self::deleting(function($model){
 
-                $original = explode('/logos/',$model->logo)[1];
-                $status   = Storage::delete('public/logos/'.$original);
+            if($model->logo) {
+                $original = explode('/logos/', $model->logo)[1];
+                $status = Storage::delete('public/logos/' . $original);
 
-                if(!$status)
-                {
+                if (!$status) {
                     info("Image file was not deleted. " . $model->logo);
                 }
+            }
         });
     }
 

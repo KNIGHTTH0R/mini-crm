@@ -4,12 +4,15 @@
  * application frontend using useful Laravel and JavaScript libraries.
  */
 
-require('./bootstrap');
-window.Vue = require('vue');
-window.Vuex = require('vuex');
+require('./bootstrap')
+require('materialize-css')
+require('materialize-css/dist/css/materialize.min.css')
 
-require('materialize-css');
-require('materialize-css/dist/css/materialize.min.css');
+window.Vue = require('vue')
+window.Vuex = require('vuex')
+window.$ = require('jquery')
+window.dt = require( 'datatables.net' )
+window.qs = require('querystring')
 
 import router from '../router'
 
@@ -17,7 +20,8 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-        token: localStorage.getItem('token') ? localStorage.getItem('token') : false
+        token: localStorage.getItem('token') ? localStorage.getItem('token') : false,
+        user: null
     },
     mutations: {
         setToken(state, value) {
@@ -27,16 +31,18 @@ export const store = new Vuex.Store({
         },
         loggedOut(state) {
             state.token = false;
+            state.user = null;
             localStorage.removeItem('token')
             router.push('/login')
         },
+        setUser(state, value) {
+            state.user = value;
+        },
     },
     actions: {
-
         authenticate({commit}, data) {
             return new Promise((resolve, reject) => {
-                axios
-                    .post('http://crm.my/api/login', {
+                axios.post('login', {
                         email: data.email,
                         password: data.password
                     })
@@ -44,20 +50,34 @@ export const store = new Vuex.Store({
 
                         let bearer_token = response.data.success.token;
 
-                        commit('setToken', bearer_token)
+                        commit('setToken', bearer_token);
+
+                        resolve(response)
+
                     }).catch(function (error) {
                     reject(error)
                 });
             })
+        },
+        getUser({commit}) {
+            axios.post('detail', {
+                    email: data.email,
+                    password: data.password
+                }, {
+                    headers: {Authorization: state.token}
+                })
+                .then(function (response) {
+                    let user = response.data.success;
+                    commit('setUser', user)
+                }).catch(function (error) {
+                console.log(error)
+            });
         },
         logout({commit}) {
             commit('loggedOut')
         },
     }
 });
-
-
-Vue.component('login', require('./components/Login.vue').default);
 
 const app = new Vue({
     router,
