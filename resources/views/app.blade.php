@@ -19,16 +19,16 @@
             <router-link tag="a" class="brand-logo" to="/">MiniCRM</router-link>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li v-if="$store.state.token">
-                    <router-link  to="/">Companies</router-link>
+                    <router-link  to="/">{{ trans('content.companies') }}</router-link>
                 </li>
                 <li v-if="$store.state.token">
-                    <router-link  to="/employees">Employees</router-link>
+                    <router-link  to="/employees">{{ trans('content.employees') }}</router-link>
                 </li>
                 <li>
-                    <router-link v-if="!$store.state.token" to="/login">Login</router-link>
+                    <router-link v-if="!$store.state.token" to="/login">{{ trans('content.login') }}</router-link>
                 </li>
                 <li>
-                    <a v-if="$store.state.token" v-on:click="$store.dispatch('logout')">Logout</a>
+                    <a v-if="$store.state.token" v-on:click="$store.dispatch('logout')">{{ trans('content.logout') }}</a>
                 </li>
             </ul>
         </div>
