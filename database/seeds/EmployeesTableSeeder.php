@@ -13,9 +13,9 @@ class EmployeesTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
 
-        $range = 10;
+        $range = 1000;
 
-        for($i = 0; $i < 10; $i++) {
+        for($i = 0; $i < $range; $i++) {
             \App\Employee::create([
                 'first_name' => $faker->name,
                 'last_name' => $faker->name,

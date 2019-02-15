@@ -14,7 +14,7 @@ class CompaniesTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
 
-        for($i = 0; $i < 10; $i++) {
+        for($i = 0; $i < 1000; $i++) {
 
             $path = $faker->image('/tmp', 100, 100);
             $name = explode('tmp/',$path)[1];

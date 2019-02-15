@@ -16,7 +16,7 @@
                     headers: {'Content-Type': 'application/json', 'Authorization': vm.$store.state.token}
                 })
                     .then(function (response) {
-                        vm.$router.push('/companies')
+                        vm.$router.push('/')
                     }).catch(function (error) {
                     console.log(error)
                 });
