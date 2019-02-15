@@ -2313,12 +2313,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "EmployerDetail.vue",
   data: function data() {
     return {
       isLoaded: false,
-      employer: null
+      employer: null,
+      errors: false
     };
   },
   beforeRouteEnter: function beforeRouteEnter(to, from, next) {
@@ -2362,8 +2368,10 @@ __webpack_require__.r(__webpack_exports__);
           'Authorization': this.$store.state.token
         }
       }).then(function (response) {
+        self.errors = false;
         self.employer = response.data;
       }).catch(function (error) {
+        self.errors = true;
         console.log(error);
       });
     }
@@ -59914,6 +59922,7 @@ var render = function() {
                       }
                     ],
                     staticClass: "validate",
+                    class: { invalid: _vm.errors },
                     attrs: {
                       placeholder: "Placeholder",
                       id: "first_name",
@@ -59950,6 +59959,7 @@ var render = function() {
                       }
                     ],
                     staticClass: "validate",
+                    class: { invalid: _vm.errors },
                     attrs: {
                       placeholder: "Placeholder",
                       id: "last_name",
@@ -59982,6 +59992,7 @@ var render = function() {
                       }
                     ],
                     staticClass: "validate",
+                    class: { invalid: _vm.errors },
                     attrs: { id: "email", type: "email" },
                     domProps: { value: _vm.employer.email },
                     on: {
@@ -60008,6 +60019,7 @@ var render = function() {
                       }
                     ],
                     staticClass: "validate",
+                    class: { invalid: _vm.errors },
                     attrs: { id: "phone", type: "text" },
                     domProps: { value: _vm.employer.phone },
                     on: {
@@ -60036,6 +60048,7 @@ var render = function() {
                       }
                     ],
                     staticClass: "validate",
+                    class: { invalid: _vm.errors },
                     attrs: { id: "company_id", type: "text" },
                     domProps: { value: _vm.employer.company_id },
                     on: {
